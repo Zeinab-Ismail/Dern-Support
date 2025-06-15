@@ -1,66 +1,298 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🎫 Ticket Management System
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A modern Laravel-based ticket management system with role-based access control, payment processing, and employee management capabilities.
 
-## About Laravel
+## 📋 Table of Contents
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Usage](#usage)
+- [API Endpoints](#api-endpoints)
+- [Testing](#testing)
+- [Deployment](#deployment)
+- [Contributing](#contributing)
+- [License](#license)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## ✨ Features
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### 🎯 Core Functionality
+- **Ticket Management**: Create, view, update, and delete tickets
+- **Role-Based Access Control**: Admin, Individual, and Business user roles
+- **Employee Management**: Admin-only employee management system
+- **Payment Processing**: Integrated payment system for tickets
+- **Status Tracking**: Track ticket status (Pending, In Progress, Completed)
+- **User Authentication**: Secure login and registration system
 
-## Learning Laravel
+### 🔐 User Roles
+- **Admin**: Full system access, employee management, all ticket operations
+- **Individual**: Create and manage personal tickets
+- **Business**: Business-specific ticket management
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### 🎨 User Interface
+- **Modern Design**: Built with Tailwind CSS and Alpine.js
+- **Responsive Layout**: Mobile-friendly interface
+- **Real-time Updates**: Dynamic content updates
+- **Payment Interface**: Streamlined payment processing
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## 🛠 Tech Stack
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Backend
+- **Laravel 12.x** - PHP web application framework
+- **PHP 8.2+** - Server-side programming language
+- **MySQL/SQLite** - Database management
+- **Spatie Laravel Permission** - Role and permission management
 
-## Laravel Sponsors
+### Frontend
+- **Tailwind CSS** - Utility-first CSS framework
+- **Alpine.js** - Lightweight JavaScript framework
+- **Vite** - Build tool and development server
+- **Axios** - HTTP client for API requests
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### Development Tools
+- **Laravel Breeze** - Authentication scaffolding
+- **Laravel Pint** - PHP code style fixer
+- **Pest** - Testing framework
+- **Laravel Sail** - Docker development environment
 
-### Premium Partners
+## 📋 Prerequisites
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+Before you begin, ensure you have the following installed:
+- **PHP 8.2 or higher**
+- **Composer** (PHP package manager)
+- **Node.js 18+** and **npm**
+- **MySQL** or **SQLite** database
+- **Git** for version control
 
-## Contributing
+## 🚀 Installation
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### 1. Clone the Repository
+```bash
+git clone https://github.com/yourusername/ticket-management-system.git
+cd ticket-management-system
+```
 
-## Code of Conduct
+### 2. Install PHP Dependencies
+```bash
+composer install
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### 3. Install Node.js Dependencies
+```bash
+npm install
+```
 
-## Security Vulnerabilities
+### 4. Environment Setup
+```bash
+cp .env.example .env
+php artisan key:generate
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### 5. Configure Database
+Edit your `.env` file with your database credentials:
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=ticket_system
+DB_USERNAME=your_username
+DB_PASSWORD=your_password
+```
 
-## License
+### 6. Run Database Migrations
+```bash
+php artisan migrate
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### 7. Seed the Database (Optional)
+```bash
+php artisan db:seed
+```
+
+### 8. Build Frontend Assets
+```bash
+npm run build
+```
+
+## ⚙️ Configuration
+
+### Environment Variables
+Key environment variables to configure:
+
+```env
+APP_NAME="Ticket Management System"
+APP_ENV=local
+APP_DEBUG=true
+APP_URL=http://localhost:8000
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=ticket_system
+DB_USERNAME=root
+DB_PASSWORD=
+
+MAIL_MAILER=smtp
+MAIL_HOST=mailpit
+MAIL_PORT=1025
+MAIL_USERNAME=null
+MAIL_PASSWORD=null
+MAIL_ENCRYPTION=null
+MAIL_FROM_ADDRESS="hello@example.com"
+MAIL_FROM_NAME="${APP_NAME}"
+```
+
+### Permissions Setup
+The system uses Spatie Laravel Permission. Ensure roles are properly configured:
+
+```bash
+php artisan permission:cache-reset
+```
+
+## 🎯 Usage
+
+### Starting the Development Server
+```bash
+# Start Laravel development server
+php artisan serve
+
+# In another terminal, start Vite for frontend assets
+npm run dev
+
+# Or use the combined development command
+composer run dev
+```
+
+### Accessing the Application
+- **Homepage**: `http://localhost:8000`
+- **Dashboard**: `http://localhost:8000/dashboard` (requires authentication)
+- **Login**: `http://localhost:8000/login`
+- **Register**: `http://localhost:8000/register`
+
+### Creating Your First Admin User
+1. Register a new account
+2. Manually update the user's role in the database:
+```sql
+INSERT INTO model_has_roles (role_id, model_type, model_id) 
+VALUES (1, 'App\\Models\\User', 1);
+```
+
+## 🔌 API Endpoints
+
+### Authentication Routes
+- `POST /login` - User login
+- `POST /register` - User registration
+- `POST /logout` - User logout
+
+### Ticket Routes (Authenticated)
+- `GET /tickets` - List all tickets
+- `POST /tickets` - Create new ticket
+- `GET /tickets/{id}` - View specific ticket
+- `PUT /tickets/{id}` - Update ticket
+- `DELETE /tickets/{id}` - Delete ticket
+- `GET /payment/{id}` - Payment page
+- `GET /payprocess/{id}` - Process payment
+
+### Employee Routes (Admin Only)
+- `GET /employees` - List all employees
+- `POST /employees` - Create new employee
+- `GET /employees/{id}` - View specific employee
+- `PUT /employees/{id}` - Update employee
+- `DELETE /employees/{id}` - Delete employee
+
+### Profile Routes (Authenticated)
+- `GET /profile` - View profile
+- `PATCH /profile` - Update profile
+- `DELETE /profile` - Delete account
+
+## 🧪 Testing
+
+### Running Tests
+```bash
+# Run all tests
+php artisan test
+
+# Run tests with coverage
+php artisan test --coverage
+
+# Run specific test file
+php artisan test tests/Feature/TicketTest.php
+```
+
+### Test Structure
+- **Feature Tests**: End-to-end functionality testing
+- **Unit Tests**: Individual component testing
+- **Database Tests**: Database operations testing
+
+## 🚀 Deployment
+
+### Production Build
+```bash
+# Install production dependencies
+composer install --optimize-autoloader --no-dev
+
+# Build frontend assets
+npm run build
+
+# Cache configuration
+php artisan config:cache
+php artisan route:cache
+php artisan view:cache
+
+# Run migrations
+php artisan migrate --force
+```
+
+### Server Requirements
+- **PHP 8.2+** with required extensions
+- **Web Server** (Apache/Nginx)
+- **MySQL 8.0+** or **PostgreSQL 13+**
+- **SSL Certificate** (recommended)
+
+### Environment Variables for Production
+```env
+APP_ENV=production
+APP_DEBUG=false
+APP_URL=https://yourdomain.com
+LOG_LEVEL=error
+```
+
+## 🤝 Contributing
+
+1. **Fork the repository**
+2. **Create a feature branch**: `git checkout -b feature/amazing-feature`
+3. **Commit your changes**: `git commit -m 'Add amazing feature'`
+4. **Push to the branch**: `git push origin feature/amazing-feature`
+5. **Open a Pull Request**
+
+### Development Guidelines
+- Follow PSR-12 coding standards
+- Write tests for new features
+- Update documentation as needed
+- Use conventional commit messages
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 📞 Support
+
+If you encounter any issues or have questions:
+
+1. **Check the documentation** in this README
+2. **Search existing issues** on GitHub
+3. **Create a new issue** with detailed information
+4. **Contact the development team**
+
+## 🙏 Acknowledgments
+
+- **Laravel Team** for the amazing framework
+- **Spatie** for the permission package
+- **Tailwind CSS** for the styling framework
+- **Alpine.js** for the JavaScript framework
+
+---
+
+**Built with ❤️ using Laravel**
