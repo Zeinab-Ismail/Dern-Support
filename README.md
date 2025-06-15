@@ -1,20 +1,6 @@
-# 🎫 Ticket Management System
+# Dern-Support System
 
 A modern Laravel-based ticket management system with role-based access control, payment processing, and employee management capabilities.
-
-## 📋 Table of Contents
-
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
-- [Configuration](#configuration)
-- [Usage](#usage)
-- [API Endpoints](#api-endpoints)
-- [Testing](#testing)
-- [Deployment](#deployment)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## ✨ Features
 
