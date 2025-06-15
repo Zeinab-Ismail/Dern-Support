@@ -2,9 +2,9 @@
 
 A modern Laravel-based ticket management system with role-based access control, payment processing, and employee management capabilities.
 
-## ✨ Features
+##  Features
 
-### 🎯 Core Functionality
+###  Core Functionality
 - **Ticket Management**: Create, view, update, and delete tickets
 - **Role-Based Access Control**: Admin, Individual, and Business user roles
 - **Employee Management**: Admin-only employee management system
@@ -12,18 +12,18 @@ A modern Laravel-based ticket management system with role-based access control, 
 - **Status Tracking**: Track ticket status (Pending, In Progress, Completed)
 - **User Authentication**: Secure login and registration system
 
-### 🔐 User Roles
+###  User Roles
 - **Admin**: Full system access, employee management, all ticket operations
 - **Individual**: Create and manage personal tickets
 - **Business**: Business-specific ticket management
 
-### 🎨 User Interface
+###  User Interface
 - **Modern Design**: Built with Tailwind CSS and Alpine.js
 - **Responsive Layout**: Mobile-friendly interface
 - **Real-time Updates**: Dynamic content updates
 - **Payment Interface**: Streamlined payment processing
 
-## 🛠 Tech Stack
+## Tech Stack
 
 ### Backend
 - **Laravel 12.x** - PHP web application framework
@@ -37,13 +37,7 @@ A modern Laravel-based ticket management system with role-based access control, 
 - **Vite** - Build tool and development server
 - **Axios** - HTTP client for API requests
 
-### Development Tools
-- **Laravel Breeze** - Authentication scaffolding
-- **Laravel Pint** - PHP code style fixer
-- **Pest** - Testing framework
-- **Laravel Sail** - Docker development environment
-
-## 📋 Prerequisites
+##  Prerequisites
 
 Before you begin, ensure you have the following installed:
 - **PHP 8.2 or higher**
@@ -52,7 +46,7 @@ Before you begin, ensure you have the following installed:
 - **MySQL** or **SQLite** database
 - **Git** for version control
 
-## 🚀 Installation
+##  Installation
 
 ### 1. Clone the Repository
 ```bash
@@ -102,7 +96,7 @@ php artisan db:seed
 npm run build
 ```
 
-## ⚙️ Configuration
+##  Configuration
 
 ### Environment Variables
 Key environment variables to configure:
@@ -137,7 +131,7 @@ The system uses Spatie Laravel Permission. Ensure roles are properly configured:
 php artisan permission:cache-reset
 ```
 
-## 🎯 Usage
+## Usage
 
 ### Starting the Development Server
 ```bash
@@ -193,92 +187,16 @@ VALUES (1, 'App\\Models\\User', 1);
 - `PATCH /profile` - Update profile
 - `DELETE /profile` - Delete account
 
-## 🧪 Testing
 
-### Running Tests
-```bash
-# Run all tests
-php artisan test
-
-# Run tests with coverage
-php artisan test --coverage
-
-# Run specific test file
-php artisan test tests/Feature/TicketTest.php
-```
-
-### Test Structure
-- **Feature Tests**: End-to-end functionality testing
-- **Unit Tests**: Individual component testing
-- **Database Tests**: Database operations testing
-
-## 🚀 Deployment
-
-### Production Build
-```bash
-# Install production dependencies
-composer install --optimize-autoloader --no-dev
-
-# Build frontend assets
-npm run build
-
-# Cache configuration
-php artisan config:cache
-php artisan route:cache
-php artisan view:cache
-
-# Run migrations
-php artisan migrate --force
-```
-
-### Server Requirements
-- **PHP 8.2+** with required extensions
-- **Web Server** (Apache/Nginx)
-- **MySQL 8.0+** or **PostgreSQL 13+**
-- **SSL Certificate** (recommended)
-
-### Environment Variables for Production
-```env
-APP_ENV=production
-APP_DEBUG=false
-APP_URL=https://yourdomain.com
-LOG_LEVEL=error
-```
-
-## 🤝 Contributing
-
-1. **Fork the repository**
-2. **Create a feature branch**: `git checkout -b feature/amazing-feature`
-3. **Commit your changes**: `git commit -m 'Add amazing feature'`
-4. **Push to the branch**: `git push origin feature/amazing-feature`
-5. **Open a Pull Request**
-
-### Development Guidelines
-- Follow PSR-12 coding standards
-- Write tests for new features
-- Update documentation as needed
-- Use conventional commit messages
-
-## 📝 License
+##  License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 📞 Support
+##  Support
 
 If you encounter any issues or have questions:
 
-1. **Check the documentation** in this README
-2. **Search existing issues** on GitHub
-3. **Create a new issue** with detailed information
-4. **Contact the development team**
+phone : 01129452912
+email : zeinabyismail445@gmail.com
 
-## 🙏 Acknowledgments
 
-- **Laravel Team** for the amazing framework
-- **Spatie** for the permission package
-- **Tailwind CSS** for the styling framework
-- **Alpine.js** for the JavaScript framework
-
----
-
-**Built with ❤️ using Laravel**
